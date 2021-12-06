@@ -196,3 +196,52 @@ if (myNumber > 8) {
 '5' = 5
 //instead do 
 Number('5') === 5
+
+/*
+
+Array and loops!
+
+An array is a list of things
+
+90% of the time you will need to loop through an array
+
+*/
+
+let beverages = [
+    'bubly',
+    'jasmine tea',
+    'water',
+    'coffee'
+];
+
+/*
+
+kinds of loops:
+    for...of
+    for...in
+    for
+    while
+
+*/
+
+for (let beverage of beverages) {
+    console.log(`I am drinking ${beverage}`);
+}
+
+// console.log(`This is beverage number ${i + 1}`);
+
+for (let i = 0; i < beverages.length; i ++) {
+    let beverage = beverages[i];
+    console.log(`I am drinking ${beverage}`);
+}
+
+for (let i = 10; i <= 100; i +5) {
+    console.log('counting up...', i);
+}
+
+// for...in loop
+for (let i in beverages) {
+    let beverage = beverages[i];
+    console.log(`I am drinking ${beverage}`);
+}
+
