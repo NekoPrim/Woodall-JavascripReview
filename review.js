@@ -138,3 +138,61 @@ undefined;
 
 // a variable can also be just be just not defined (actually, not declared)
 // Uncaught ReferenceError: variable 'whatever' is undefined
+
+[
+    {
+        firstName: 'Dez',
+        lastName:'Quade',
+        cohort: 'Woodall'
+    },
+    {
+        firstName: 'Joe',
+        lastName: 'Anderson'
+    }
+]
+
+let cohort = 'Woodall';
+
+if (cohort) {
+    console.log(`Welcome to ${cohort}`);
+}
+
+/*
+
+CONDITIONALS
+
+*/
+
+if (someBoolean) {
+    // then, do this
+}
+else {
+    // Do this, if nothing else is truthy
+}
+
+/*
+
+Conditional Operators
+
+*/
+
+if (myNumber > 8) {
+    // Do whatever...
+}
+
+/*
+
+<   more than
+<=  greater than or equal to
+>   less than
+>=  less than or equal to 
+=== triple equals (exactly equals)
+==  double equals (coerce types, then compare) (try not to use)
+!== not equals
+!=  not equals (coerce types)
+
+*/
+
+'5' = 5
+//instead do 
+Number('5') === 5
