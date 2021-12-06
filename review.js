@@ -193,9 +193,12 @@ if (myNumber > 8) {
 
 */
 
+/*
 '5' = 5
 //instead do 
 Number('5') === 5
+
+*/
 
 /*
 
@@ -245,3 +248,101 @@ for (let i in beverages) {
     console.log(`I am drinking ${beverage}`);
 }
 
+// while is usually used if you want to keep running continuously or until a condition is finally met
+
+let forecast;
+while (forecast.windSpeed < 50) {
+    forecast = goAskTheWeatherService();
+}
+
+sendAMessageToMortensenToStopTheCrane();
+
+let isGameRunning = true;
+while (isGameRunning) {
+    nextTick();
+}
+
+$('#stopButton').oc('click', function() {
+    isGameRunning = false;
+})
+
+/*
+
+Functions!!!!!
+
+*/
+
+function generateSong(words, notes) {
+    let song = `
+    ${words} ${words} ${words}
+    ${notes} ${notes} ${notes}`;
+    return song;
+}
+
+let words = "hello hello"; //this words is separate from the words in function
+
+let mySong = generateSong('hey hey hey', 'C F G');
+console.log('check out my song', song);
+
+// function declaration
+// this is hoisted
+function sum(n1, n2) {
+    return n1 + n2;
+}
+
+// function expression
+// this will not run until code gets to it
+let answer = function(n1, n2) {
+    return n1 + n2;
+};
+
+// Create an anonymous function
+// and assign it to a variable called sum
+function(n1, n2) {
+    return n1 +n2;
+}
+
+function sayHell() {
+    console.log('hell');
+}
+
+function callMeTwoTimes(fn) {
+    fn();
+    fn();
+}
+
+// Common pattern in javascrip
+// "Callback function"
+callMeTwoTimes(sayHell);
+
+callMeTwoTimes(function() {
+    console.log('hell');
+})
+
+$('button').on('click', onButtonClick);
+
+function onButtonClick() {
+    console.log('stop clicking me');
+}
+
+$(document).on('ready', onReady);
+
+function onReady() {
+    console.log('so ready');
+}
+
+$(document).on('ready', function(){
+    console.log('so ready');
+});
+
+Number('5');        // 5
+
+let notes = ['do', 're', 'me'];
+// this is called a "method"
+notes.push('fa');       //add to end
+notes.pop();            //remove from end
+notes.shift();          //remove from front
+notes.unshift('la');    //add to front
+
+notes.join(', ');       //shows array on one line
+notes.split(', ');      //
